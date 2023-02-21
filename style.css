@@ -15,3 +15,46 @@ body {
   height: 100vh;
   background: linear-gradient(to bottom, #7db0de 50%, #12395d 50%);
 }
+.container {
+  width: 400px;
+  background: var(--skin);
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  border-radius: 12px;
+  padding: 18px 18px;
+  transform: translateX(-50%);
+  box-shadow: #1d5c96 0px 0px 15px 0px;
+}
+.wrapper {
+  width: 100%;
+}
+.wrapper input {
+  width: 100%;
+  padding: 15px 10px;
+  text-align: right;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 35px;
+}
+.wrapper input::placeholder {
+  color: var(--white);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-top: 40px;
+}
+
+.buttons input[type="button"] {
+  font-size: 20px;
+  padding: 17px;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+}
