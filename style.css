@@ -58,3 +58,16 @@ body {
   color: var(--white);
   cursor: pointer;
 }
+
+.buttons input[type="button"]:hover {
+  box-shadow: 0 8px 25px #12395d;
+}
+
+input[type="button"]#equal {
+  grid-row: span 2;
+  background-color: #7db0de;
+}
+
+.buttons input[type="button"][value="0"] {
+  grid-column: span 2;
+}
