@@ -31,3 +31,11 @@ equal.addEventListener("click", () => {
     alert("Invalid Input");
   }
 });
+
+clear.addEventListener("click", () => {
+  input.value = "";
+});
+
+erase.addEventListener("click", () => {
+  input.value = input.value.substr(0, input.value.length - 1);
+});
