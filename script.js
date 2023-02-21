@@ -1,5 +1,33 @@
 let inputBtns = document.querySelectorAll(".inputBtn"),
-  input = document.querySelectorById("input"),
-  equal = document.querySelectorById("equal"),
-  clear = document.querySelectorById("clear"),
-  erase = document.querySelectorById("delete");
+  input = document.getElementById("input"),
+  equal = document.getElementById("equal"),
+  clear = document.getElementById("clear"),
+  erase = document.getElementById("delete");
+
+let equalSign = 0;
+
+window.onload = () => {
+  input.value = "";
+};
+inputBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (equalSign == 1) {
+      equalSign = 0;
+      input.value = "";
+    }
+    input.value += btn.value;
+  });
+});
+
+equal.addEventListener("click", () => {
+  equalSign = 1;
+  let inp_val = input.value;
+  try {
+    let ans = eval(inp_val);
+    if (Number.isInteger(ans)) {
+      input.value = ans;
+    } else input.value = ans.toFixed(2);
+  } catch (err) {
+    alert("Invalid Input");
+  }
+});
