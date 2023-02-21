@@ -1,0 +1,17 @@
+:root {
+  --Blue: #12395d;
+  --lightblue: #7db0de;
+  --white: #fff;
+  --skin: #1d5c96;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto mono", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #7db0de 50%, #12395d 50%);
+}
